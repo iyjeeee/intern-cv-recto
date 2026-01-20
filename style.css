@@ -7,6 +7,49 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Header Container with Flex */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.theme-btn:hover {
+    background-color: #555;
+}
+
+body.dark-mode .theme-btn {
+    background-color: #e0e0e0;
+    color: #1a1a1a;
+}
+
+body.dark-mode .theme-btn:hover {
+    background-color: #f0f0f0;
 }
 
 /* Layout and Visuals of Body Section*/
@@ -21,6 +64,11 @@ header {
     border-bottom: 5px solid #333;
 }
 
+body.dark-mode header {
+    background-color: #2a2a2a;
+    border-bottom: 5px solid #e0e0e0;
+}
+
 section {
     margin-bottom: 30px;
     padding: 16px;
@@ -30,12 +78,32 @@ section {
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+/* Dark Mode Sections - Keep White Background with Black Text */
+body.dark-mode section {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    color: #000000;
+}
+
+body.dark-mode section h1,
+body.dark-mode section h3,
+body.dark-mode section p,
+body.dark-mode section ul li {
+    color: #000000;
+}
+
 footer {
     text-align: center;
     padding: 10px;
     background-color: #f4f4f4;
     border-top: 5px solid #333;
     margin-top: 20px;
+}
+
+body.dark-mode footer {
+    background-color: #2a2a2a;
+    border-top: 5px solid #e0e0e0;
 }
 
 /* Navigation Section */
@@ -60,8 +128,18 @@ nav ul li a {
     border-radius: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
     background-color: #555;
+}
+
+body.dark-mode nav ul li a {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: #e0e0e0;
 }
